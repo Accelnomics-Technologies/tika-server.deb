@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install --no-install-recommends --yes \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN adduser --system --disabled-password tika
+RUN adduser --system --disabled-password --uid 1000 tika
 
 RUN mkdir /var/cache/tesseract \
     && chown tika /var/cache/tesseract
