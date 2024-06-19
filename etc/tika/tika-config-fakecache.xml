@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <properties>
-  <taskTimeoutMillis>900000</taskTimeoutMillis>
+  <server>
+    <params>
+      <!-- maximum time to allow per parse before shutting down and restarting
+          the forked parser. Not allowed if nofork=true. -->
+      <taskTimeoutMillis>900000</taskTimeoutMillis>
+    </params>
+  </server>
   <parsers>
     <parser class="org.apache.tika.parser.DefaultParser">
       <!-- this is not formally necessary, but prevents loading of unnecessary parser -->
