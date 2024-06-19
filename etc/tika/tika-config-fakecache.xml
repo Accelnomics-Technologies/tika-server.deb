@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <properties>
+  <taskTimeoutMillis>900000</taskTimeoutMillis>
   <parsers>
     <parser class="org.apache.tika.parser.DefaultParser">
       <!-- this is not formally necessary, but prevents loading of unnecessary parser -->
