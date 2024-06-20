@@ -33,4 +33,4 @@ USER tika
 # Environment variable TIKA_CONFIG is set in docker-compose configs using tesseract-ocr-cache
 # Documentation of Tika server parameter --config see https://tika.apache.org/2.2.1/configuring.html#Using_a_Tika_Configuration_XML_file
 
-ENTRYPOINT exec java -jar /usr/share/java/tika-server-standard-${TIKA_VERSION}.jar -h 0.0.0.0 ${TIKA_CONFIG:+--config "$TIKA_CONFIG"}
+ENTRYPOINT exec java -Xms512m -Xmx2g -jar /usr/share/java/tika-server-standard-${TIKA_VERSION}.jar -h 0.0.0.0 ${TIKA_CONFIG:+--config "$TIKA_CONFIG"}
